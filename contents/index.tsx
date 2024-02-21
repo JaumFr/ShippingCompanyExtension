@@ -76,7 +76,9 @@ const Content = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:3000/shipping-company")
+      const response = await axios.get(
+        "https://shipping-company-api.vercel.app/"
+      )
       setShippingCompanies(response.data)
       setFilteredCompanies(response.data)
     }
